@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="tkd_background">#101114</color>
+    <color name="tkd_accent">#E53945</color>
+</resources>

@@ -1,0 +1,31 @@
+# Local / self-hosted deployment. Put a TLS-terminating reverse proxy (e.g. Caddy) in front of `api`
+# before exposing it to the internet: the Android app only allows HTTPS outside local development.
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: tkdpro
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD}
+      POSTGRES_DB: tkdpro
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./schema.sql:/docker-entrypoint-initdb.d/schema.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U tkdpro"]
+      interval: 5s
+      retries: 10
+
+  api:
+    build: .
+    env_file: .env
+    environment:
+      DATABASE_URL: postgresql+asyncpg://tkdpro:${POSTGRES_PASSWORD}@db:5432/tkdpro
+      POSE_MODEL_PATH: /srv/models/pose_landmarker_full.task
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:8000:8000"
+
+volumes:
+  pgdata:

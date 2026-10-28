@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="112" fill="#d92f3d"/>
+  <!-- Belt: band, knot and two tails -->
+  <rect x="72" y="214" width="368" height="60" rx="14" fill="#101114"/>
+  <path d="M222 196h68l22 50-22 50h-68l-22-50z" fill="#101114" stroke="#d92f3d" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M232 292l-46 118 50 8 32-116zM280 292l46 118-50 8-32-116z" fill="#101114" stroke="#d92f3d" stroke-width="10" stroke-linejoin="round"/>
+  <rect x="72" y="234" width="368" height="8" fill="#ffffff" opacity=".18"/>
+</svg>

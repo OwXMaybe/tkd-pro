@@ -1,0 +1,17 @@
+*.iml
+.gradle/
+/local.properties
+/.idea/
+.DS_Store
+/build/
+**/build/
+/captures
+.externalNativeBuild
+.cxx
+secrets.properties
+backend/.env
+backend/.venv/
+backend/storage/
+__pycache__/
+*.pyc
+desktop/dist/

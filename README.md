@@ -13,6 +13,14 @@ computer**, with the same data on both.
 Turkish quick guide: [BILGISAYAR-VE-TELEFON.md](BILGISAYAR-VE-TELEFON.md). AI is off until the owner
 enables it and chooses which data categories may be shared.
 
+## Screenshots
+
+| Home | Analysis |
+|---|---|
+| ![Home dashboard](docs/screenshots/home.png) | ![Weekly analysis](docs/screenshots/analysis.png) |
+
+*Web app (desktop / PWA) with sample training data.*
+
 ## What is in this repository
 
 | Path | Contents |

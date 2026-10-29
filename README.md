@@ -70,3 +70,7 @@ cd backend && docker compose up -d --build   # alternative: server on a VPS/home
 - Manual match observations are never shown as automatic detections.
 - Running pace is not presented as a measure of fighting endurance.
 - AI output is labelled, cites its data sources, and does not replace a coach or give medical advice.
+
+## License
+
+[MIT](LICENSE) © 2026 Eren Tyto
